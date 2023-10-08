@@ -3,6 +3,10 @@ name = "rcat"
 version = "0.1.0"
 edition = "2021"
 authors = ["Luiz Picanço <lpicanco@gmail.com>"]
+license-file = "LICENSE"
+readme = "README.md"
+description = "Concatenate and reverse the lines of a file or stdin"
+repository = "https://github.com/lpicanco/rcat"
 
 [dependencies]
 rev_lines = "0.3.0"
