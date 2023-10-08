@@ -1,0 +1,8 @@
+[package]
+name = "rcat"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rev_lines = "0.3.0"
+clap = { version = "4.4.6", features = ["derive"] }
