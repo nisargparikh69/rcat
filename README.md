@@ -17,3 +17,33 @@ Options:
   -V, --version
           Print version
 ```
+
+## Example: Reversing a file
+```bash
+$ rcat Cargo.toml
+
+clap = { version = "4.4.6", features = ["derive"] }
+rev_lines = "0.3.0"
+[dependencies]
+
+authors = ["Luiz Picanço <lpicanco@gmail.com>"]
+edition = "2021"
+version = "0.1.0"
+name = "rcat"
+[package]
+```
+
+## Example: Reversing from stdin
+```bash
+$ cat Cargo.toml | rcat
+
+clap = { version = "4.4.6", features = ["derive"] }
+rev_lines = "0.3.0"
+[dependencies]
+
+authors = ["Luiz Picanço <lpicanco@gmail.com>"]
+edition = "2021"
+version = "0.1.0"
+name = "rcat"
+[package]
+```
