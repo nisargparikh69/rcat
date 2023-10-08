@@ -2,6 +2,7 @@
 name = "rcat"
 version = "0.1.0"
 edition = "2021"
+authors = ["Luiz Picanço <lpicanco@gmail.com>"]
 
 [dependencies]
 rev_lines = "0.3.0"
