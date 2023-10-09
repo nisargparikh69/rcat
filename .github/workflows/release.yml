@@ -86,7 +86,7 @@ jobs:
         uses: Swatinem/rust-cache@v2.0.1
         with:
           key: build-${{ matrix.target }}
-      - name: compile
+      - name: Build
         uses: actions-rs/cargo@v1
         with:
           use-cross: true
