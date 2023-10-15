@@ -14,6 +14,9 @@ use rev_lines::{RevLines, RevLinesError};
 struct Args {
     /// Name of the file to read. If not specified, reads from stdin.
     name: Option<String>,
+    /// Number of lines to display.
+    #[clap(short, long)]
+    lines: Option<usize>,
 }
 
 fn main() {
@@ -22,8 +25,13 @@ fn main() {
         None => read_from_stdin(),
         Some(file_name) => read_from_file(file_name),
     };
+    // limit lines if line option is specified
+    let lines = match args.lines {
+        None => rev_lines,
+        Some(n) => Box::new(rev_lines.take(n)),
+    };
 
-    for line in rev_lines {
+    for line in lines {
         println!("{}", line.unwrap());
     }
 }
